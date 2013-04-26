@@ -2,11 +2,10 @@
 \ProvidesPackage{mlptikz}[2013/04/25 v0.1 (Seth Miers)]
 \RequirePackage{tikz}
 
-\definecolor{cee4043}{RGB}{238,64,67}
-\definecolor{c61bb4c}{RGB}{97,187,76}
-
 \newcommand{\applejack}[1]{
   \resizebox{#1}{!}{%
+	\definecolor{cee4043}{RGB}{238,64,67}
+	\definecolor{c61bb4c}{RGB}{97,187,76}
 	\begin{tikzpicture}[y=0.80pt, x=0.8pt,yscale=-1, inner sep=0pt, outer sep=0pt]
 	\begin{scope}[cm={{1.5301,0.0,0.0,1.5301,(223.65615,231.92511)}}]
 	\path[fill=cee4043] (-402.0000,-5.0000) .. controls (-379.3333,-27.6667) and
