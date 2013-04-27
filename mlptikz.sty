@@ -1,74 +1,197 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mlptikz}[2013/04/25 v0.1 (Seth Miers)]
+
 \RequirePackage{tikz}
+\RequirePackage{keycommand}
+\RequirePackage{etoolbox}
+\RequirePackage{xkeyval}
 
-\newcommand{\applejack}[1]{
-  \resizebox{#1}{!}{%
-	\definecolor{cee4043}{RGB}{238,64,67}
-	\definecolor{c61bb4c}{RGB}{97,187,76}
-	\begin{tikzpicture}[y=0.80pt, x=0.8pt,yscale=-1, inner sep=0pt, outer sep=0pt]
-	\begin{scope}[cm={{1.5301,0.0,0.0,1.5301,(223.65615,231.92511)}}]
-	\path[fill=cee4043] (-402.0000,-5.0000) .. controls (-379.3333,-27.6667) and
-		(-340.6667,-22.6667) .. (-286.0000,10.0000) .. controls (-246.6667,-42.6667)
-		and (-211.0000,-63.6667) .. (-179.0000,-53.0000) .. controls
-		(-153.0000,-44.3333) and (-135.0000,-17.3333) .. (-125.0000,28.0000) ..
-		controls (-115.6667,72.6667) and (-119.0000,113.3333) .. (-135.0000,150.0000)
-		.. controls (-153.0000,191.3333) and (-182.0000,210.3333) ..
-		(-222.0000,207.0000) .. controls (-265.3333,228.3333) and (-306.6667,224.6667)
-		.. (-346.0000,196.0000) .. controls (-378.6667,172.0000) and
-		(-401.3333,137.0000) .. (-414.0000,91.0000) .. controls (-426.6667,45.6667)
-		and (-422.6667,13.6667) .. (-402.0000,-5.0000);
-	\path[fill=c61bb4c] (40.0000,-408.0000) .. controls (47.3333,-394.6667) and
-		(49.6667,-375.3333) .. (47.0000,-350.0000) .. controls (27.0000,-348.0000) and
-		(11.6667,-357.3333) .. (1.0000,-378.0000) .. controls (-8.3333,-398.0000) and
-		(-11.3333,-419.3333) .. (-8.0000,-442.0000) .. controls (15.3333,-434.6667)
-		and (31.3333,-423.3333) .. (40.0000,-408.0000);
-	\path[fill=c61bb4c] (51.0000,-326.0000) .. controls (53.0000,-345.3333) and
-		(58.6667,-365.3333) .. (68.0000,-386.0000) .. controls (78.6667,-408.6667) and
-		(90.3333,-424.0000) .. (103.0000,-432.0000) -- (124.0000,-405.0000) --
-		(90.0000,-381.0000) .. controls (68.0000,-362.3333) and (55.0000,-344.0000) ..
-		(51.0000,-326.0000);
-	\path[fill=c61bb4c] (-386.0000,-107.0000) .. controls (-358.0000,-98.3333) and
-		(-335.0000,-81.3333) .. (-317.0000,-56.0000) .. controls (-307.6667,-43.3333)
-		and (-301.3333,-31.6667) .. (-298.0000,-21.0000) -- (-333.0000,-23.0000) ..
-		controls (-358.3333,-32.3333) and (-376.0000,-60.3333) ..
-		(-386.0000,-107.0000);
-	\path[fill=c61bb4c] (-279.0000,-37.0000) -- (-289.0000,1.0000) .. controls
-		(-293.0000,-33.0000) and (-291.0000,-64.6667) .. (-283.0000,-94.0000) --
-		(-267.0000,-128.0000) .. controls (-251.0000,-126.6667) and
-		(-242.0000,-119.0000) .. (-240.0000,-105.0000) .. controls
-		(-256.6667,-89.6667) and (-269.6667,-67.0000) .. (-279.0000,-37.0000);
-	\path[fill=cee4043] (332.0000,88.0000) .. controls (361.3333,112.6667) and
-		(369.6667,147.6667) .. (357.0000,193.0000) .. controls (345.0000,234.3333) and
-		(320.6667,265.6667) .. (284.0000,287.0000) .. controls (241.3333,311.0000) and
-		(199.0000,308.3333) .. (157.0000,279.0000) .. controls (113.6667,281.0000) and
-		(79.6667,263.3333) .. (55.0000,226.0000) .. controls (33.0000,193.3333) and
-		(24.0000,156.3333) .. (28.0000,115.0000) .. controls (31.3333,69.6667) and
-		(49.0000,42.3333) .. (81.0000,33.0000) .. controls (115.0000,23.0000) and
-		(150.0000,45.0000) .. (186.0000,99.0000) .. controls (249.3333,64.3333) and
-		(298.0000,60.6667) .. (332.0000,88.0000);
-	\path[fill=cee4043] (-146.0000,-286.0000) .. controls (-142.0000,-332.0000) and
-		(-122.0000,-359.6667) .. (-86.0000,-369.0000) .. controls (-46.0000,-379.6667)
-		and (-2.6667,-357.3333) .. (44.0000,-302.0000) .. controls (97.3333,-343.3333)
-		and (136.6667,-348.6667) .. (162.0000,-318.0000) .. controls
-		(185.3333,-290.6667) and (186.3333,-253.0000) .. (165.0000,-205.0000) ..
-		controls (150.3333,-171.6667) and (127.0000,-146.3333) .. (95.0000,-129.0000)
-		.. controls (67.2122,-112.0061) and (29.3719,-108.2480) .. (-6.0000,-132.0000)
-		.. controls (-52.0000,-115.3333) and (-89.3333,-127.6667) ..
-		(-118.0000,-169.0000) .. controls (-142.0000,-205.0000) and
-		(-151.3333,-244.0000) .. (-146.0000,-286.0000);
-	\path[fill=c61bb4c] (243.0000,58.0000) -- (203.0000,79.0000) .. controls
-		(204.3333,53.6667) and (214.0000,28.0000) .. (232.0000,2.0000) --
-		(260.0000,-28.0000) .. controls (272.0000,8.0000) and (266.3333,36.6667) ..
-		(243.0000,58.0000);
-	\path[fill=c61bb4c] (211.0000,-86.0000) .. controls (217.0000,-27.3333) and
-		(211.0000,26.3333) .. (193.0000,75.0000) .. controls (196.3333,31.6667) and
-		(194.3333,-6.3333) .. (187.0000,-39.0000) -- (174.0000,-74.0000) .. controls
-		(182.6667,-86.6667) and (195.0000,-90.6667) .. (211.0000,-86.0000);
-	\end{scope}
+\usetikzlibrary{shapes}
 
-	\end{tikzpicture}
-  }
+%----------------------------------------------------------------------------------------
+%    Base Code
+%----------------------------------------------------------------------------------------
+\newcommand{\getmlptikz}[9]{
+	\ifstrequal{#1}{#2}{%
+    	\edef\colorval{{\commandkey{color}}}
+	\edef\textval{{\commandkey{text}}}
+        %I need to add error checking for invalid inputs
+        \expandafter\ifstrequal\colorval{mono}{%
+		#3
+        }{%
+		#7
+	}
+        \expandafter\ifstrequal\colorval{custom}{%
+        	#4
+        }{}
+        \expandafter\ifstrequal\colorval{black}{%
+        	#5
+        }{}
+        \expandafter\ifstrequal\colorval{invert}{%
+        	#6
+        }{}
+		\resizebox{\commandkey{size}}{!}{%
+			\begin{tikzpicture}[y=\commandkey{yscale}, x=\commandkey{xscale}, yscale=-\commandkey{flipy}, xscale=\commandkey{flipx}, inner sep=0pt, outer sep=0pt]
+				\begin{scope}[cm=#9,rotate=\commandkey{rotate},opacity=\commandkey{opacity}]
+					#8
+					\expandafter\ifstrequal\textval{on}{%
+					\node[\commandkey{textshape},draw=\commandkey{textshapebordercolor}, text opacity=1, opacity=\commandkey{textshapeopacity}, yscale=\commandkey{textscale},xscale=\commandkey{textscale}, fill=\commandkey{textshapecolor}, line width=\commandkey{textshapeborder}, rotate=\commandkey{textshaperotate}, inner sep=0pt,minimum size=14pt, align=center] (1) at(0,0) {\,{\color{\commandkey{textcolor}}{\commandkey{textvalue}}}\,};
+					}{}
+				\end{scope}
+			\end{tikzpicture}
+		}
+	}{\typeout{Error in mlptikz: #2 is not a valid input}}
 }
+
+%----------------------------------------------------------------------------------------
+%    Main Function Call
+%----------------------------------------------------------------------------------------
+
+\newkeycommand\mlptikz[size=1in,%		% size can have any numbered value and scales it to an x by x box
+	color=full,%				% color can be full (for the default colors), mono (for monochrome), or custom (to define your own)
+	ccolor1a=128,%				% the following values are for each of your custom colors, you'll need the table to find out what goes where
+	ccolor1b=128,%
+	ccolor1c=128,%
+	ccolor2a=128,%
+	ccolor2b=128,%
+	ccolor2c=128,%
+	ccolor3a=128,%
+	ccolor3b=128,%
+	ccolor3c=128,%
+	ccolor4a=128,%
+	ccolor4b=128,%
+	ccolor4c=128,%
+	ccolor5a=128,%
+	ccolor5b=128,%
+	ccolor5c=128,%
+	opacity=1,%				% opacity is a value from 0 to 1 which changes transparency
+	text=off,%				% want to put a page number or text inside these icons!? Set this to on or off
+	textvalue=test,%			% what text should be displayed?
+	textposx=0,%				% the position of the text horizontally
+	textposy=0,%				% the position of the text vertically
+	textcolor=black,%			% change the color of the text
+	textscale=10,%				% make the text in here smaller and bigger
+	textshape=ellipse,%			% you probably want some kind of background for your text, ellipse or rectangle?
+	textshapecolor=white,%			% change the background color
+	textshapeborder=0.5mm,%			% change the thickness of the border
+	textshapebordercolor=black,%		% change the color of the border
+	textshapeopacity=1,%			% what is the opacity of your background? These are values from 0 to 1
+	textshaperotate=0,%			% rotate the text from -360 to 360 (45 will rotate it 45 degrees clockwise)
+	rotate=0,%				% need to rotate one of these icons? do it in degrees from -360 to 360
+	flipx=1,%				% flip the image horizontally! Use -1 to flip and 1 to keep the default
+	flipy=1,%				% flip the image vertically! Use -1 to flip and 1 to keep the default
+	xscale=0.8,%				% need to scale the image? change this number to any value!
+	yscale=0.8][1]{				% change this number to any value to strech and shrink vertically
+
+%----------------------------------------------------------------------------------------
+%    How to add more
+%----------------------------------------------------------------------------------------
+%	\getmlptikz{
+%		name
+%	}{%
+%		#1
+%	}{%
+%		monocolors
+%	}{%
+%		customcolors
+%	}{%
+%		black
+%	}{%
+%		invertcolors
+%	}{%
+%		fullcolors
+%	}{%
+%		texcode
+%	}{%
+%		scopecm
+%	}
+
+%----------------------------------------------------------------------------------------
+%    applejack
+%----------------------------------------------------------------------------------------
+
+\getmlptikz{%
+applejack
+}{%
+#1
+}{%
+\definecolor{cee4043}{RGB}{123,123,123}
+\definecolor{c61bb4c}{RGB}{120,120,120}
+}{%
+\definecolor{cee4043}{RGB}{\commandkey{ccolor1a},\commandkey{ccolor1b},\commandkey{ccolor1c}}
+\definecolor{c61bb4c}{RGB}{\commandkey{ccolor2a},\commandkey{ccolor2b},\commandkey{ccolor2c}}
+}{%
+\definecolor{cee4043}{RGB}{00,00,00}
+\definecolor{c61bb4c}{RGB}{00,00,00}
+}{%
+\definecolor{cee4043}{RGB}{17,191,188}
+\definecolor{c61bb4c}{RGB}{158,68,179}
+}{%
+\definecolor{cee4043}{RGB}{238,64,67}
+\definecolor{c61bb4c}{RGB}{97,187,76}
+}{%
+  \path[fill=cee4043] (-402.0000,-5.0000) .. controls (-379.3333,-27.6667) and
+    (-340.6667,-22.6667) .. (-286.0000,10.0000) .. controls (-246.6667,-42.6667)
+    and (-211.0000,-63.6667) .. (-179.0000,-53.0000) .. controls
+    (-153.0000,-44.3333) and (-135.0000,-17.3333) .. (-125.0000,28.0000) ..
+    controls (-115.6667,72.6667) and (-119.0000,113.3333) .. (-135.0000,150.0000)
+    .. controls (-153.0000,191.3333) and (-182.0000,210.3333) ..
+    (-222.0000,207.0000) .. controls (-265.3333,228.3333) and (-306.6667,224.6667)
+    .. (-346.0000,196.0000) .. controls (-378.6667,172.0000) and
+    (-401.3333,137.0000) .. (-414.0000,91.0000) .. controls (-426.6667,45.6667)
+    and (-422.6667,13.6667) .. (-402.0000,-5.0000);
+  \path[fill=c61bb4c] (40.0000,-408.0000) .. controls (47.3333,-394.6667) and
+    (49.6667,-375.3333) .. (47.0000,-350.0000) .. controls (27.0000,-348.0000) and
+    (11.6667,-357.3333) .. (1.0000,-378.0000) .. controls (-8.3333,-398.0000) and
+    (-11.3333,-419.3333) .. (-8.0000,-442.0000) .. controls (15.3333,-434.6667)
+    and (31.3333,-423.3333) .. (40.0000,-408.0000);
+  \path[fill=c61bb4c] (51.0000,-326.0000) .. controls (53.0000,-345.3333) and
+    (58.6667,-365.3333) .. (68.0000,-386.0000) .. controls (78.6667,-408.6667) and
+    (90.3333,-424.0000) .. (103.0000,-432.0000) -- (124.0000,-405.0000) --
+    (90.0000,-381.0000) .. controls (68.0000,-362.3333) and (55.0000,-344.0000) ..
+    (51.0000,-326.0000);
+  \path[fill=c61bb4c] (-386.0000,-107.0000) .. controls (-358.0000,-98.3333) and
+    (-335.0000,-81.3333) .. (-317.0000,-56.0000) .. controls (-307.6667,-43.3333)
+    and (-301.3333,-31.6667) .. (-298.0000,-21.0000) -- (-333.0000,-23.0000) ..
+    controls (-358.3333,-32.3333) and (-376.0000,-60.3333) ..
+    (-386.0000,-107.0000);
+  \path[fill=c61bb4c] (-279.0000,-37.0000) -- (-289.0000,1.0000) .. controls
+    (-293.0000,-33.0000) and (-291.0000,-64.6667) .. (-283.0000,-94.0000) --
+    (-267.0000,-128.0000) .. controls (-251.0000,-126.6667) and
+    (-242.0000,-119.0000) .. (-240.0000,-105.0000) .. controls
+    (-256.6667,-89.6667) and (-269.6667,-67.0000) .. (-279.0000,-37.0000);
+  \path[fill=cee4043] (332.0000,88.0000) .. controls (361.3333,112.6667) and
+    (369.6667,147.6667) .. (357.0000,193.0000) .. controls (345.0000,234.3333) and
+    (320.6667,265.6667) .. (284.0000,287.0000) .. controls (241.3333,311.0000) and
+    (199.0000,308.3333) .. (157.0000,279.0000) .. controls (113.6667,281.0000) and
+    (79.6667,263.3333) .. (55.0000,226.0000) .. controls (33.0000,193.3333) and
+    (24.0000,156.3333) .. (28.0000,115.0000) .. controls (31.3333,69.6667) and
+    (49.0000,42.3333) .. (81.0000,33.0000) .. controls (115.0000,23.0000) and
+    (150.0000,45.0000) .. (186.0000,99.0000) .. controls (249.3333,64.3333) and
+    (298.0000,60.6667) .. (332.0000,88.0000);
+  \path[fill=cee4043] (-146.0000,-286.0000) .. controls (-142.0000,-332.0000) and
+    (-122.0000,-359.6667) .. (-86.0000,-369.0000) .. controls (-46.0000,-379.6667)
+    and (-2.6667,-357.3333) .. (44.0000,-302.0000) .. controls (97.3333,-343.3333)
+    and (136.6667,-348.6667) .. (162.0000,-318.0000) .. controls
+    (185.3333,-290.6667) and (186.3333,-253.0000) .. (165.0000,-205.0000) ..
+    controls (150.3333,-171.6667) and (127.0000,-146.3333) .. (95.0000,-129.0000)
+    .. controls (67.2122,-112.0061) and (29.3719,-108.2480) .. (-6.0000,-132.0000)
+    .. controls (-52.0000,-115.3333) and (-89.3333,-127.6667) ..
+    (-118.0000,-169.0000) .. controls (-142.0000,-205.0000) and
+    (-151.3333,-244.0000) .. (-146.0000,-286.0000);
+  \path[fill=c61bb4c] (243.0000,58.0000) -- (203.0000,79.0000) .. controls
+    (204.3333,53.6667) and (214.0000,28.0000) .. (232.0000,2.0000) --
+    (260.0000,-28.0000) .. controls (272.0000,8.0000) and (266.3333,36.6667) ..
+    (243.0000,58.0000);
+  \path[fill=c61bb4c] (211.0000,-86.0000) .. controls (217.0000,-27.3333) and
+    (211.0000,26.3333) .. (193.0000,75.0000) .. controls (196.3333,31.6667) and
+    (194.3333,-6.3333) .. (187.0000,-39.0000) -- (174.0000,-74.0000) .. controls
+    (182.6667,-86.6667) and (195.0000,-90.6667) .. (211.0000,-86.0000);
+}{%
+{{1.5301,0.0,0.0,1.5301,(223.65615,231.92511)}}
+}
+
+}
+
 
 \endinput
